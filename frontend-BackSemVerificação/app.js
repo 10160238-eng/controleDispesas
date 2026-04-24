@@ -27,7 +27,7 @@ async function adicionar() {
     const valor = Number(document.getElementById('valor').value);
     const tipo = document.getElementById('tipo').value;
 
-    await fetch('http://localhost:3000/transacoes', {
+    await fetch('http://localhost:8080/transacoes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({descricao, valor, tipo})
@@ -37,7 +37,7 @@ async function adicionar() {
 }
 
 async function remover(id) {
-    await fetch(`http://localhost:3000/transacoes/${id}`, {
+    await fetch(`http://localhost:8080/transacoes/${id}`, {
         method: 'DELETE'
     })
 
